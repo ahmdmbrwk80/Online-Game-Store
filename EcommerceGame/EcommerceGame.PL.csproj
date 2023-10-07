@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Game\" />
-    <Folder Include="Views\Cart\" />
     <Folder Include="Views\Order\" />
   </ItemGroup>
 
