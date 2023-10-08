@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace EcommerceGame.Controllers
-{
+{// test pull
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
