@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace MvcProject.BLL.Interfaces
 {
-    public interface IGenaricRepository<T>
+    public interface IGenaricRepository
     {
-        List<T> GetAll();
     }
 }
