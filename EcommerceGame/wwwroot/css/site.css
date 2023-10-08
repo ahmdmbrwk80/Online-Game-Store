@@ -20,3 +20,179 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+:root {
+    --mainColor: #6d4eec;
+    --mainBackroundColor: #6d4eec;
+    --primaryBackroundColor: #f7f7f7;
+    --ratingColor: #eabe12;
+    --transition: 0.5s;
+    --transformScale: 1.1;
+    --fw-500: 500;
+}
+
+.mainColor {
+    color: var(--mainColor);
+}
+
+.mainbg {
+    background-color: var(--mainBackroundColor)
+}
+
+.primarybg {
+    background-color: var(--primaryBackroundColor)
+}
+
+.ratingColor {
+    color: var(--ratingColor)
+}
+
+.transition {
+    transition: var(--transition)
+}
+
+.transformScale {
+    transform: scale(var(--transformScale));
+}
+
+.fw-500 {
+    font-weight: var(--fw-500)
+}
+
+.cPointer {
+    cursor: pointer
+}
+/*for Category Layout Partial
+*/
+.CategoryContainerCol:before {
+    content: "RPG";
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+    height: 20px;
+    z-index: 99;
+    font-weight: bold
+}
+
+.CategoryContainer:hover img {
+    transform: scale(var(--transformScale))
+}
+
+/*for Card Layout Partial
+*/
+.TopSellerContainer:hover .overlay {
+    right: 10px;
+    opacity: 1;
+}
+
+.overlay {
+    right: -40px;
+    opacity: 0;
+    top: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/*for Card Item Layout Partial
+*/
+.discoverSection {
+    background-color: #F3F3F3;
+}
+
+    .discoverSection p {
+        margin: 0;
+        padding: 0;
+    }
+
+        .discoverSection p:first-child {
+            font-size: 14px;
+        }
+/*for Latest Article Card LayoutPartial
+*/
+.overlay-2 {
+    background-color: #000;
+    opacity: 0.3;
+    color: #fff;
+}
+
+.fixedContainerCol:hover .overlay-2 {
+    opacity: 0.6
+}
+
+.fixedContainerCol:hover img {
+    transform: scale(var(--transformScale))
+}
+
+.overlay-3 {
+    z-index: 999999;
+    color: #fff
+}
+
+    .overlay-3 p {
+        color: #462e2e;
+        font-size: 14px;
+    }
+
+.overlay-32 button {
+    font-size: 12px;
+}
+
+.overlay-32 p {
+    font-size: 20px;
+    text-align: center
+}
+
+.overlay-3 p:nth-of-type(2) {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.overlay-3 h4 {
+    max-width: 50%;
+}
+
+.overlay-3 button,
+.startWarsSection button {
+    width: fit-content;
+    border-radius: 20px;
+}
+
+/*for start Wars Section
+*/
+.startWarsSectionCol:hover img {
+    transform: scale(var(--transformScale))
+}
+
+.startWarsSectionCol:hover .playIcon {
+    transform: scale(0.9)
+}
+
+.playIcon {
+    color: #fff;
+    position: absolute;
+    font-size: 24px;
+}
+
+.playIcon2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 50%
+}
+/*for linksContainer
+*/
+.linksContainer a {
+    padding: 5px;
+}
+
+    .linksContainer a:hover {
+        color: #6d4eec !important;
+    }
+
+.discoverBtn {
+    background-color: #F3F3F3;
+    color: #3E3E3E;
+    font-size: 12px;
+    font-weight: 600
+}
