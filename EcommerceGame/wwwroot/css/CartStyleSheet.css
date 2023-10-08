@@ -1,0 +1,23 @@
+﻿
+body {
+}
+
+
+.remove-item {
+    position: absolute;
+    right: 5%;
+    border: none;
+    color: var(--color1);
+    background-color: transparent;
+}
+
+.remove-item:hover {
+    color: var(--color3);
+    background-color: var(--color1);
+    border-radius: 5px;
+}
+
+#cart-card-description {
+    display: block;
+    margin-top: 10px;
+}

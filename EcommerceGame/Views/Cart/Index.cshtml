@@ -3,5 +3,26 @@
     ViewData["Title"] = "Cart";
 }
 
+<div id="product1" class="card mb-3 cart-product-container">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="C:/Users/Sob7yy/Desktop/1.webp" class="img-fluid rounded-start cart-product-img" alt="">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h2 id="card-title" class="card-title">FIFA 23</h2>
+                <button class="remove-item" onclick="removeItem(this)"><i class="fa-solid fa-x"></i></button>
+                <h6 id="cart-card-description" class="card-title">Rep your country’s colors and live the tournament in the most immersive EA SPORTS™ FIFA Women’s World Cup™ experience yet, complete with each of the 32 qualified nations, custom stadium dressings.</h6>
+                <h5 class="card-text">£69.99</h5>
+                <h5  class="card-text">Platform: PC</h5>
+                <p class="card-text"><small class="text-body-secondary">Release Date</small></p>
+                <p class="card-text"><small class="text-body-secondary">Publisher</small></p>
+                <p class="card-text"><small class="text-body-secondary">Developer</small></p>
+            </div>
+        </div>
+    </div>
+</div>
 
-
+@section Styles {
+    <link rel="stylesheet" href="~/css/CartStyleSheet.css" asp-append-version="true" />
+}
