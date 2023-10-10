@@ -23,6 +23,7 @@ namespace Demo.DAL.Contexts
         public DbSet<AddToCart> addToCarts { get; set; }
         public DbSet<Order> orders { get; set; }
         public DbSet<Order_Item> order_Items { get; set; }
+        public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<Platform> platforms { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -57,8 +58,8 @@ namespace Demo.DAL.Contexts
  .HasForeignKey(b => b.User_ID);
 
             modelBuilder.Entity<Order_Item>()
- .HasOne(b => b.order)
- .WithMany(a => a.order_Items)
+ .HasOne(b => b.Order)
+ .WithMany(a => a.Order_Item)
  .HasForeignKey(b => b.Order_ID);
             modelBuilder.Entity<Order_Item>()
  .HasOne(b => b.game)

@@ -1,4 +1,6 @@
 using Demo.DAL.Contexts;
+using EcommerceGame.BLL.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace EcommerceGame
@@ -8,12 +10,16 @@ namespace EcommerceGame
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            builder.Services
+    .AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<FinalMVCContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<FinalMVCContext>(options=> options
             .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-           // builder.Services.AddScoped<IdepartmentRepository, departmentRepository>();
+            // builder.Services.AddScoped<IdepartmentRepository, departmentRepository>();
 
             var app = builder.Build();
 
