@@ -2,7 +2,7 @@
 
 namespace EcommerceGame.PL.Controllers
 {
-    public class UserOrder : Controller
+    public class UserOrderController : Controller
     {
         public IActionResult Index()
         {
