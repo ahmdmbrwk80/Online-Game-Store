@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace MvcProject.BLL.Repositories
 {
-    public class GenaricRepository : IGenaricRepository
+    public class GenaricRepository<T> : IGenaricRepository<T> where T : class
     {
+
     }
 }
