@@ -1,0 +1,72 @@
+﻿@using EcommerceGame.DAL.Models;
+@model IEnumerable<Order>
+@{
+}
+<div style="width:100%" class="mt-2">
+    <a href="/Cart/Index" class="btn btn-primary my-2">Back</a>
+
+    <h4>My Orders</h4>
+    @if (Model != null && Model.Count() > 0)
+    {
+        <table class="table table-striped">
+            <tr>
+                <th>OrderDate</th>
+                <th>OrderStatus</th>
+            </tr>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Date.ToString("dd-MM-yyyy")</td>
+                    <td>@order.OrderStatus.statusname</td>
+                </tr>
+                @if (order.Order_Item != null && order.Order_Item.Count > 0)
+                {
+                    <tr>
+                        <td>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>
+                                        Total:
+                                    </td>
+                                    <td>
+                                        @(order.Order_Item.Select(item => item.game.Price * item.Quantity).Sum())
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Game</th>
+                                    <th>Image</th>
+                                    <th>Unit Price(INR)</th>
+                                    <th>Total Price</th>
+                                </tr>
+                                @foreach (var item in order.Order_Item)
+                                {
+                                    <tr>
+                                        <td>@item.game.Name</td>
+                                        <td>
+                                            @if (string.IsNullOrEmpty(item.game.Img_Url))
+                                            {
+                                                <img src="/images/NoImage.png" style="width:80px;height:100px" />
+                                            }
+                                            else
+                                            {
+                                                <img src="/images/@item.game.Img_Url" style="width:80px;height:100px" />
+                                            }
+                                        </td>
+                                        <td>@item.game.Price X @item.Quantity</td>
+                                        <td> @(item.game.Price * item.Quantity) </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+
+    }
+    else
+    {
+        <h5>No orders</h5>
+    }
+</div>
