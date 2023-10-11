@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="~/css/all.min.css" />
     @await RenderSectionAsync("Styles", required: false)
     <link rel="stylesheet" href="~/EcommerceGame.styles.css" asp-append-version="true" />
+    @*Fonts From Google ==> Lato, Cabin, "Readex Pro"*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Lato&family=Readex+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -32,11 +36,11 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
