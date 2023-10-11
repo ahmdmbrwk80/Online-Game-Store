@@ -14,11 +14,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Game\**" />
+    <Content Remove="Views\Game\**" />
+    <EmbeddedResource Remove="Views\Game\**" />
+    <None Remove="Views\Game\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EcommerceGame.BLL\EcommerceGame.BLL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Views\Game\" />
+    <Folder Include="Views\Order\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Game\GameDetails.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
