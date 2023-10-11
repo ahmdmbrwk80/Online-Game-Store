@@ -17,10 +17,6 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
-
 :root {
     --mainColor: #6d4eec;
     --mainBackroundColor: #6d4eec;
@@ -32,7 +28,7 @@ body {
 }
 
 .mainColor {
-    color: var(--mainColor);
+    color: var(--mainColor) !important;
 }
 
 .mainbg {
@@ -62,7 +58,15 @@ body {
 .cPointer {
     cursor: pointer
 }
-/*for Category Layout Partial
+/*Start NavBar*/
+.socialLink {
+    background-color: #efefef;
+    color: rgba(0,0,0,0.4) !important;
+    width: 30px;
+    height: 30px;
+}
+/*for Category Layout Partial #774430//hover
+
 */
 .CategoryContainerCol:before {
     content: "RPG";
