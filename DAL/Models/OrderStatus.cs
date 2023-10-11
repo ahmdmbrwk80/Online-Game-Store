@@ -2,9 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 public class OrderStatus
 {
-    [Table("OrderStatus")]
+    //[Table("OrderStatus")]
     public OrderStatus()
-	{
+    { }
 
                 public int Id { get; set; }
     [Required]
@@ -13,5 +13,4 @@ public class OrderStatus
 	[MaxLength(20)]
 	public string? statusname { get; set; }	
 
-}
 }
