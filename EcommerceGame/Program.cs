@@ -3,6 +3,7 @@ using EcommerceGame.BLL.Interfaces;
 using EcommerceGame.BLL.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using EcommerceGame.BLL.Repositories;
 
 namespace EcommerceGame
 {
@@ -23,6 +24,7 @@ namespace EcommerceGame
 
             // builder.Services.AddScoped<IdepartmentRepository, departmentRepository>();
 
+            builder.Services.AddScoped<IGameRepository, GameRepository>();
 
 
                   
