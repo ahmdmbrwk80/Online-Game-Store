@@ -20,9 +20,15 @@ namespace EcommerceGame
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<FinalMVCContext>(options=> options
             .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             // builder.Services.AddScoped<IdepartmentRepository, departmentRepository>();
 
+
+
+
+
             builder.Services.AddTransient<IHomeRepository, HomeRepository>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
