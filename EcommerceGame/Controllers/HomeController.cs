@@ -1,6 +1,13 @@
-﻿using EcommerceGame.Models;
+﻿using EcommerceGame.DAL.Models;
+using EcommerceGame.Models;
+using Humanizer.Localisation;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using EcommerceGame.DAL.Models.DTOs;
+using EcommerceGame.BLL.Repositories;
+using EcommerceGame.BLL.Interfaces;
+
+
 
 namespace EcommerceGame.Controllers
 {// test pull

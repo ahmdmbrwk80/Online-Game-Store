@@ -1,5 +1,6 @@
 using Demo.DAL.Contexts;
 using EcommerceGame.BLL.Interfaces;
+using EcommerceGame.BLL.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,7 @@ namespace EcommerceGame
             .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             // builder.Services.AddScoped<IdepartmentRepository, departmentRepository>();
 
+            builder.Services.AddTransient<IHomeRepository, HomeRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
