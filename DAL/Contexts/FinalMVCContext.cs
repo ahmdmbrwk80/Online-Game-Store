@@ -1,5 +1,6 @@
 ﻿
 using EcommerceGame.DAL.Models;
+using Humanizer.Localisation;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace Demo.DAL.Contexts
         {
 
         }
-
+        public DbSet<Category> Categories { get; set; }
         public DbSet<User> users { get; set; }
         public DbSet<Game> games { get; set; }
         public DbSet<UserRole> userRoles { get; set; }
