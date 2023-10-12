@@ -25,7 +25,7 @@ namespace EcommerceGame
 
 
 
-               
+                  
 
             builder.Services.AddTransient<IHomeRepository, HomeRepository>();
 
